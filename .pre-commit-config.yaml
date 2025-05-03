@@ -24,8 +24,9 @@ repos:
     hooks:
       - id: check-identifiers
         name: Check Python Identifiers
-        entry: python .tools/check_identifiers.py
+        # entry: python .tools/check_identifiers.py
         language: system
         types: [python]
         files: \.py$
-        exclude: ^\.tools/check_identifiers\.py$
+        entry: python .git/hooks/check_identifiers.py
+        exclude: ^\.git/hooks/check_identifiers\.py$
