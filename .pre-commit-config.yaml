@@ -1,0 +1,31 @@
+# repos:
+#   - repo: https://github.com/pre-commit/pre-commit
+#     rev: v4.2.0 # Use the latest stable version of pylint
+#     hooks:
+#       - id: pylint
+#         name: check-variable-naming
+#         entry: pylint --disable=all --enable=invalid-name --variable-rgx='^([a-z]{3,}[a-zA-Z0-9]*)$|^([a-z]{3,}(_[a-z0-9]+)*)$'
+#         language: python
+#         types: [python]
+# repos:
+#   - repo: https://github.com/astral-sh/ruff-pre-commit
+#     # Ruff version.
+#     rev: v0.11.8
+#     hooks:
+#       # Run the linter.
+#       - id: ruff
+#         types_or: [python, pyi]
+#         args: [--fix]
+#       # Run the formatter.
+#       - id: ruff-format
+#         types_or: [python, pyi]
+repos:
+  - repo: local
+    hooks:
+      - id: check-identifiers
+        name: Check Python Identifiers
+        entry: python check_identifiers.py
+        language: system
+        types: [python]
+        files: \.py$
+        exclude: ^check_identifiers\.py$
