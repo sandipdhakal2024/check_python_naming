@@ -1,0 +1,9 @@
+#ignore the environment folder
+myenv/
+
+#ignore the pdf and txt file
+*.pdf
+*.txt
+
+# exclude test.txt from ignore to add to commit
+!codes.txt
