@@ -5,5 +5,7 @@ myenv/
 *.pdf
 *.txt
 
+.pre-commit-config.yaml
+
 # exclude test.txt from ignore to add to commit
 !codes.txt
